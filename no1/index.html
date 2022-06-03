@@ -46,6 +46,30 @@ function loadApp() {
 		return;
 	}
 	
+	//06.03수정
+	 $(window).resize(function(){
+	var win = $(this); //this = window
+	if (win.width() >= 820) { flipbook.turn('display','double');}
+	else {
+	  flipbook.turn('display','single');
+	}
+	});
+	
+	$(window).width(function(){
+	  var win = $(this); //this = window
+	  if (win.width() >= 820) { flipbook.turn('display','double');}
+	  else {
+	    flipbook.turn('display','single');
+	  }
+	});
+	$(window).resize(function(){
+	var win = $(this); //this = window
+	if (win.width() >= 820) { flipbook.turn('display','double');}
+	else {
+	  flipbook.turn('display','single');
+	}
+	});
+	
 	// Create the flipbook
 
 	flipbook.turn({
