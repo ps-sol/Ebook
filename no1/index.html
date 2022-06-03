@@ -46,6 +46,22 @@ function loadApp() {
 		return;
 	}
 	
+	//06.03추가
+	if(window.innerWidth<768 && window.innerWidth >= 320) {
+           $('.magazine').turn({
+            width:430,
+            height:650,
+            elevation:50,
+            inclination:50,
+            display: 'single',
+            autocenter:true,
+            acceleration: true,
+            gradients:true,
+            zoom:2,// you can change it as you desire
+               duration:50,
+          });
+         }
+	
 	// Create the flipbook
 
 	flipbook.turn({
