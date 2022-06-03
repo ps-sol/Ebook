@@ -33,19 +33,6 @@
 
 <script type="text/javascript">
 	
-	//06.03추가
-	function checkMobile() {
-	 return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-	}
-	
-	if (!checkMobile()) { // not mobile
-	 $('.magazine').turn('display', 'double');
-	}
-	else {
-	 $('.magazine').turn('display', 'single');
-	}
-	//
-
 function loadApp() {
 
  	$('#canvas').fadeIn(1000);
