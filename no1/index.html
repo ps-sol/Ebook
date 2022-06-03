@@ -126,17 +126,16 @@ function loadApp() {
 	// 06.03수정
 	if(window.innerWidth<768 && window.innerWidth >= 320) {
            $('#flipbook').turn({
-            width:430,
-            height:650,
-            elevation:50,
-            inclination:50,
-            display: 'single',
-            autocenter:true,
-            acceleration: true,
-            gradients:true,
-            zoom:2,// you can change it as you desire
-               duration:50,
-          });
+                        display: 'single',
+                        acceleration: true,
+                        gradients: true,
+                        elevation:50,
+                        when: {
+                            turned: function(e, page) {
+                                console.log('Current view: ', $(this).turn('view'));
+                            }
+                        }
+                    });
          }
 	
 	// Zoom.js
